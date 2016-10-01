@@ -15,10 +15,12 @@ import {
   Dimensions
 } from 'react-native';
 
+import Header from './Header.js';
+
 var windowWidth = Dimensions.get('window').width; 
 
 
-export default class BooksNearby extends Component {
+export default class BooksNearbyView extends Component {
 
   constructor (props) {
     super(props);
@@ -26,7 +28,11 @@ export default class BooksNearby extends Component {
 
   render() {
     return (
+      <View style={{flex: 1}}>
+            <Header/>
             <BooksListView style={{flex: 1}}/>
+      </View>
+
       /*<View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!
@@ -58,6 +64,8 @@ export default class BooksNearby extends Component {
 }
 
 
+
+
 class BookView extends Component {
   render() {
     return (
@@ -81,7 +89,7 @@ class BooksListView extends Component {
   }
   render() {
     return (
-      <View style={{paddingTop: 22, flex: 1}}>
+      <View style={{paddingTop: 20, paddingLeft: 16, flex: 1}}>
         <ListView contentContainerStyle={styles.list}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => <BookView/>}

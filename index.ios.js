@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 
 import ProfileView from './components/ProfileView';
+import BooksNearbyView from './components/BooksNearbyView';
 
 var items = [
   {
@@ -28,7 +29,8 @@ var items = [
 class BookshelfMobile extends Component {
   render() {
     return (
-      <ProfileView items={items}/>
+      <BooksNearbyView/>
+      //<ProfileView items={items}/>
     );
   }
 }
