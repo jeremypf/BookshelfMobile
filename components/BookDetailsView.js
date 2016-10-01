@@ -29,10 +29,10 @@ export default class BookDetailsView extends Component {
             <Header title="Book Details"/>
             <ScrollView>
               <View style={styles.detailscontainer}>
-                <View style={{flex: 1, backgroundColor:'blue', justifyContent: 'center'}}>
-
+                <View style={{flex: 2, justifyContent: 'center'}}>
+                  <View style={{margin:25 , backgroundColor:'skyblue', height:160, width: 110}}/>
                 </View>
-                <View style={{flex: 2}}>
+                <View style={{flex: 3}}>
                     <Text style={{margin:10, fontSize: 20}}>Brothers & Beasts</Text>
                     <Text style={{margin:10, fontSize: 16}}>Author: Bob</Text>
                     <Text style={styles.subtitle}>Published: Sept. 2015</Text>
@@ -42,7 +42,7 @@ export default class BookDetailsView extends Component {
                 </View>
               </View>
               <Text style={styles.title}>Synopsis</Text>
-              <Text style={styles.subtitle}>This is where the Synopsis of the book goes</Text>
+              <Text style={styles.subtitle}>This is where the Synopsis of the book goes. This is a book about a Synopsis is where thie book goes</Text>
               <Text style={styles.title}>Book Owners</Text>
               
               <BookOwnerListItem name="Jeremy"/>

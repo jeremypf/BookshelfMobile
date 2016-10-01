@@ -47,12 +47,9 @@ var items = [
 class BookshelfMobile extends Component {
   render() {
     return (
-      //<BookDetailsView/>
+      <BookDetailsView/>
       //<BooksNearbyView/>
       //<ProfileView items={items}/>
-      <View style={{flex:1}}>
-        <BooksNearbyView />
-      </View>
     );
   }
 }
