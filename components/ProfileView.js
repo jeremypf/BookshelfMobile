@@ -8,6 +8,9 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import { BooksListView } from './BooksNearbyView';
+import styles from './../styles/stylesheet';
+
 export default class ProfileView extends Component {
   constructor (props) {
     super(props);
@@ -31,9 +34,10 @@ class BorrowedBooks extends Component {
 
   render() {
     return (
-      <View style={{marginTop: 20, alignSelf: 'stretch'}}>
+      <View style={{marginTop: 20, alignSelf: 'stretch', flex: 1}}>
         <Text style={{fontSize: 20, marginBottom: 5}}>Currently Borrowed</Text>
         <Text style={styles.h4}> {this.props.borrowed} in total</Text>
+        <BooksListView />
       </View>
     );
   }
@@ -78,31 +82,3 @@ class BookItem extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    padding: 10,
-    alignItems: 'flex-start'
-  },
-  texts: {
-    paddingLeft: 10,
-    justifyContent: 'center'
-  },
-  profilebadge: {
-    flexDirection: 'row',
-    height: 60,
-    alignSelf: 'stretch',
-    marginBottom: 20
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  h4: {
-    fontSize: 16,
-    color: '#828282'
-  }
-});

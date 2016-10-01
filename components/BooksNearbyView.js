@@ -16,6 +16,7 @@ import {
 } from 'react-native';
 
 import Header from './Header.js';
+import styles from './../styles/stylesheet';
 
 var windowWidth = Dimensions.get('window').width; 
 
@@ -76,7 +77,7 @@ class BookView extends Component {
 
 
 
-class BooksListView extends Component {
+export class BooksListView extends Component {
   // Initialize the hardcoded data
   constructor(props) {
     super(props);
@@ -98,38 +99,3 @@ class BooksListView extends Component {
     );
   }
 }
-
-//          renderRow={(rowData) => <Text style={styles.item}>{rowData}</Text>}
-
-
-
-
-const styles = StyleSheet.create({
-  list: {
-        flexDirection: 'row',
-        flexWrap: 'wrap'
-    },
-    item: {
-        backgroundColor: 'blue',
-        margin: 3,
-        width: 100,
-        height: 10
-    },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
