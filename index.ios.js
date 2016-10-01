@@ -30,8 +30,8 @@ var items = [
 class BookshelfMobile extends Component {
   render() {
     return (
-      <BookDetailsView/>
-      //<ProfileView items={items}/>
+      //<BooksNearbyView/>
+      <ProfileView items={items}/>
     );
   }
 }
