@@ -5,10 +5,11 @@ import {
   StyleSheet,
   Text,
   View,
+  ScrollView,
   TouchableHighlight
 } from 'react-native';
 
-import { BooksListView } from './BooksNearbyView';
+import BookView from './BookView';
 import styles from './../styles/stylesheet';
 
 export default class ProfileView extends Component {
@@ -18,11 +19,13 @@ export default class ProfileView extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <ProfileBadge/>
-        <Hr style={styles.hr} lineColor='#dddddd'/ >
-        <BorrowedBooks borrowed='5'/>
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <ProfileBadge/>
+          <Hr style={styles.hr} lineColor='#dddddd'/ >
+          <BorrowedBooks borrowed={this.props.items.length} items={this.props.items}/>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -37,7 +40,13 @@ class BorrowedBooks extends Component {
       <View style={{marginTop: 20, alignSelf: 'stretch', flex: 1}}>
         <Text style={{fontSize: 20, marginBottom: 5}}>Currently Borrowed</Text>
         <Text style={styles.h4}> {this.props.borrowed} in total</Text>
-        <BooksListView />
+        <View style= {{marginTop: 20, flex: 1, flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+          {
+            this.props.items.map( (item, i) => (
+              <BookView />
+            ))
+          }
+        </View>
       </View>
     );
   }

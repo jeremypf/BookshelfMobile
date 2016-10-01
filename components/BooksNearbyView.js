@@ -30,8 +30,8 @@ export default class BooksNearbyView extends Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
-            <Header title="Books NearBy" subtitle="In Waterloo"/>
+      <View style={styles.container}>
+            <Header title="Books Nearby" subtitle="In Waterloo"/>
             <BooksListView style={{flex: 1}}/>
       </View>
 
@@ -65,8 +65,6 @@ export default class BooksNearbyView extends Component {
   }
 }
 
-
-
 export class BooksListView extends Component {
   // Initialize the hardcoded data
   constructor(props) {
@@ -80,7 +78,7 @@ export class BooksListView extends Component {
   }
   render() {
     return (
-      <View style={{paddingTop: 20, paddingLeft: 16, flex: 1}}>
+      <View style={{paddingTop: 20, alignSelf: 'stretch', flex: 1}}>
         <ListView contentContainerStyle={styles.list}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => <BookView/>}

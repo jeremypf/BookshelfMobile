@@ -13,18 +13,17 @@ var windowWidth = Dimensions.get('window').width;
 export default class BookView extends Component {
   render() {
     return (
-      <View style={styles.container} />
+        <View style={styles.container} />
       );
   }
 }
 
-
 const styles = StyleSheet.create({
   container: {
-    width: windowWidth * 0.4,
+    width: (windowWidth - 20) * 0.5 - 5,
     height: windowWidth * 0.6,
     backgroundColor: 'skyblue',
-    margin: 10
+    marginBottom: 10
   },
 
 });

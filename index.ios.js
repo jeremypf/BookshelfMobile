@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 
 import ProfileView from './components/ProfileView';
+import Header from './components/Header';
 import BooksNearbyView from './components/BooksNearbyView';
 import BookDetailsView from './components/BookDetailsView';
 
@@ -24,15 +25,34 @@ var items = [
   {
     title: '1984',
     author: 'George Orwell'
+  },
+  {
+    title: '1984',
+    author: 'George Orwell'
+  },
+  {
+    title: '1984',
+    author: 'George Orwell'
+  },
+  {
+    title: '1984',
+    author: 'George Orwell'
+  },
+  {
+    title: '1984',
+    author: 'George Orwell'
   }
 ];
 
 class BookshelfMobile extends Component {
   render() {
     return (
-      <BookDetailsView/>
+      //<BookDetailsView/>
       //<BooksNearbyView/>
       //<ProfileView items={items}/>
+      <View style={{flex:1}}>
+        <BooksNearbyView />
+      </View>
     );
   }
 }
