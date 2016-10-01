@@ -9,7 +9,7 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-import { BooksListView, BookView } from './BooksNearbyView';
+import BookView from './BookView';
 import styles from './../styles/stylesheet';
 
 export default class ProfileView extends Component {
@@ -43,7 +43,7 @@ class BorrowedBooks extends Component {
         <View style= {{marginTop: 20, flex: 1, flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
           {
             this.props.items.map( (item, i) => (
-              <BookView/>
+              <BookView />
             ))
           }
         </View>

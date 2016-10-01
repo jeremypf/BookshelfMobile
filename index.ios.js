@@ -15,6 +15,7 @@ import {
 import ProfileView from './components/ProfileView';
 import Header from './components/Header';
 import BooksNearbyView from './components/BooksNearbyView';
+import BookDetailsView from './components/BookDetailsView';
 
 var items = [
   {
@@ -47,10 +48,8 @@ class BookshelfMobile extends Component {
   render() {
     return (
       <View style={{flex:1}}>
-        <Header/>
-        <ProfileView items={items}/>
+        <BooksNearbyView />
       </View>
-      
     );
   }
 }

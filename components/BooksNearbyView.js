@@ -16,6 +16,7 @@ import {
 } from 'react-native';
 
 import Header from './Header.js';
+import BookView from './BookView.js';
 import styles from './../styles/stylesheet';
 
 var windowWidth = Dimensions.get('window').width; 
@@ -30,7 +31,8 @@ export default class BooksNearbyView extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <BooksListView style={{flex: 1}}/>
+            <Header title="Books Nearby" subtitle="In Waterloo"/>
+            <BooksListView style={{flex: 1}}/>
       </View>
 
       /*<View style={styles.container}>
@@ -62,19 +64,6 @@ export default class BooksNearbyView extends Component {
 
   }
 }
-
-
-
-
-export class BookView extends Component {
-  render() {
-    return (
-      <View style={{width: (windowWidth - 20) * 0.5 - 5 , height: windowWidth * 0.6, backgroundColor: 'skyblue', marginBottom: 10}} />
-      );
-  }
-}
-
-
 
 export class BooksListView extends Component {
   // Initialize the hardcoded data
