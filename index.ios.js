@@ -14,6 +14,7 @@ import {
 
 import ProfileView from './components/ProfileView';
 import BooksNearbyView from './components/BooksNearbyView';
+import BookDetailsView from './components/BookDetailsView';
 
 var items = [
   {
@@ -29,7 +30,7 @@ var items = [
 class BookshelfMobile extends Component {
   render() {
     return (
-      <BooksNearbyView/>
+      <BookDetailsView/>
       //<ProfileView items={items}/>
     );
   }
