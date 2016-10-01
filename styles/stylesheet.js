@@ -47,5 +47,29 @@ export default styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-  }
+  },
+  title: {
+    fontSize: 26,
+    textAlign: 'left',
+    paddingLeft: 10,
+    paddingTop: 40
+  },
+  subtitle: {
+    textAlign: 'left',
+    paddingLeft: 10,
+    color: '#595959'
+  },
+  menubutton: {
+    height: 50,
+    width: 50,
+    backgroundColor: 'orange'
+  },
+  headercontainer: {
+    height: 90, 
+    flexDirection: 'row'
+  },
+    detailscontainer: {
+    height: 170, 
+    flexDirection: 'row'
+  },
 });
