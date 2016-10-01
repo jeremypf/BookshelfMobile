@@ -30,6 +30,7 @@ export default styles = StyleSheet.create({
   },
   list: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     flexWrap: 'wrap'
   },
   item: {

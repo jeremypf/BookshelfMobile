@@ -29,9 +29,8 @@ export default class BooksNearbyView extends Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
-            <Header/>
-            <BooksListView style={{flex: 1}}/>
+      <View style={styles.container}>
+        <BooksListView style={{flex: 1}}/>
       </View>
 
       /*<View style={styles.container}>
@@ -67,10 +66,10 @@ export default class BooksNearbyView extends Component {
 
 
 
-class BookView extends Component {
+export class BookView extends Component {
   render() {
     return (
-      <View style={{width: windowWidth * 0.4, height: windowWidth * 0.6, backgroundColor: 'skyblue', margin: 10}} />
+      <View style={{width: (windowWidth - 20) * 0.5 - 5 , height: windowWidth * 0.6, backgroundColor: 'skyblue', marginBottom: 10}} />
       );
   }
 }
@@ -90,7 +89,7 @@ export class BooksListView extends Component {
   }
   render() {
     return (
-      <View style={{paddingTop: 20, paddingLeft: 16, flex: 1}}>
+      <View style={{paddingTop: 20, alignSelf: 'stretch', flex: 1}}>
         <ListView contentContainerStyle={styles.list}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => <BookView/>}
